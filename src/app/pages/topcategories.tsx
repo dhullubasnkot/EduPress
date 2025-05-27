@@ -79,17 +79,17 @@ export default function TopCategories() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[30px]">
         {categories.map((category) => (
           <div
             key={category.name}
-            className="group gap-[24px] flex flex-col items-center justify-center h-[234px] w-[234px] rounded-xl bg-white shadow-md border border-gray-200 p-6 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl "
+            className="group gap-[24px] flex flex-col items-center justify-center h-[232px] w-[232px] rounded-xl bg-white shadow-md border border-gray-200  text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl "
           >
-            <div className="mb-4">{category.icon}</div>
-            <h3 className="text-lg font-semibold text-gray-800 group-hover:text-orange-500 transition-colors duration-300">
+            <div className="mb-4 h-[32px] w-[32px]">{category.icon}</div>
+            <h3 className="text-[20px] font-semibold text-gray-800 group-hover:text-orange-500 transition-colors duration-300">
               {category.name}
             </h3>
-            <p className="text-sm text-gray-500 mt-1">
+            <p className="text-[18px] text-gray-500 mt-1">
               {category.courses} Courses
             </p>
           </div>
