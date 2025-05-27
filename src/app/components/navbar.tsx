@@ -1,22 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
-import { BsPaintBucket, BsCodeSquare } from "react-icons/bs";
+// import { BsPaintBucket, BsCodeSquare } from "react-icons/bs";
 
 export default function Navbar() {
-  const categories = [
-    {
-      name: "Web Development",
-      icon: <BsCodeSquare className="text-orange-500" />,
-    },
-    { name: "Design", icon: <BsPaintBucket className="text-orange-500" /> },
-    { name: "Marketing", icon: <BsPaintBucket className="text-orange-500" /> },
-    { name: "Business", icon: <BsPaintBucket className="text-orange-500" /> },
-    {
-      name: "Photography",
-      icon: <BsPaintBucket className="text-orange-500" />,
-    },
-  ];
   return (
     <div className="flex items-center justify-between px-6 h-[72px] w-full ">
       <div className="w-[166.3px] h-[30px]  flex items-center gap-3">

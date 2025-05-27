@@ -1,4 +1,12 @@
-import { BsPaintBucket, BsCodeSquare } from "react-icons/bs";
+import {
+  BsPaintBucket,
+  BsCodeSquare,
+  BsCpuFill,
+  BsGraphUp,
+  BsBrush,
+  BsCameraReelsFill,
+  BsMusicNoteBeamed,
+} from "react-icons/bs";
 
 export default function TopCategories() {
   const categories = [
@@ -27,11 +35,35 @@ export default function TopCategories() {
       courses: 120,
       icon: <BsPaintBucket className="text-orange-500 text-5xl" />,
     },
+    {
+      name: "Data Science",
+      courses: 90,
+      icon: <BsGraphUp className="text-orange-500 text-5xl" />,
+    },
+    {
+      name: "AI & Machine Learning",
+      courses: 80,
+      icon: <BsCpuFill className="text-orange-500 text-5xl" />,
+    },
+    {
+      name: "UI/UX",
+      courses: 100,
+      icon: <BsBrush className="text-orange-500 text-5xl" />,
+    },
+    {
+      name: "Music Production",
+      courses: 75,
+      icon: <BsMusicNoteBeamed className="text-orange-500 text-5xl" />,
+    },
+    {
+      name: "Film & Video",
+      courses: 60,
+      icon: <BsCameraReelsFill className="text-orange-500 text-5xl" />,
+    },
   ];
 
   return (
     <div className="flex flex-col h-auto w-[1290px] mx-auto p-10">
-      {/* Header */}
       <div className="flex justify-between items-center mb-10">
         <div className="flex flex-col">
           <h2 className="text-3xl font-extrabold text-gray-800">
@@ -47,12 +79,11 @@ export default function TopCategories() {
         </button>
       </div>
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
         {categories.map((category) => (
           <div
             key={category.name}
-            className="group flex flex-col items-center justify-center h-[234px] w-full rounded-xl bg-white shadow-md border border-gray-200 p-6 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-orange-400"
+            className="group gap-[24px] flex flex-col items-center justify-center h-[234px] w-[234px] rounded-xl bg-white shadow-md border border-gray-200 p-6 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl "
           >
             <div className="mb-4">{category.icon}</div>
             <h3 className="text-lg font-semibold text-gray-800 group-hover:text-orange-500 transition-colors duration-300">
