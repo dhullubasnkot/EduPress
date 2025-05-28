@@ -104,7 +104,7 @@ export default function FeaturedCourses() {
                     fill
                     className="object-cover rounded-t-lg"
                   />
-                  <span className="absolute top-3 left-3 bg-black text-white text-xs font-semibold px-4 py-2 rounded-full">
+                  <span className="h-[40px] max-w-[200px] absolute top-3 left-3 bg-black text-white text-[16px] font-semibold px-4 py-2 rounded-full">
                     {course.category}
                   </span>
                 </div>
