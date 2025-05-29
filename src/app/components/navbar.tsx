@@ -35,7 +35,7 @@ export default function Navbar() {
         <Link href="/learnpress">LearnPress&nbsp;&nbsp;Add-On</Link>
         <Link href="/premium">Premium Theme</Link>
       </nav>
-
+      {/* login/logout */}
       <div className="flex items-center gap-4">
         <Link href="/login" className="text-black font-medium">
           Login / Register
