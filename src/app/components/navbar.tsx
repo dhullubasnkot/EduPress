@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
-// import { BsPaintBucket, BsCodeSquare } from "react-icons/bs";
+
 
 export default function Navbar() {
   return (

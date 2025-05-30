@@ -3,75 +3,7 @@
 import Image from "next/image";
 import { BiTimer, BiHardHat } from "react-icons/bi";
 import { Card } from "flowbite-react";
-
-const courses = [
-  {
-    id: 1,
-    author: "Determined-Poitras",
-    title: "Create an LMS Website with LearnPress",
-    duration: "2 Weeks",
-    students: 156,
-    oldPrice: 29.0,
-    newPrice: "Free",
-    image: "/1.jpg",
-    category: "Development",
-  },
-  {
-    id: 2,
-    author: "Determined-Poitras",
-    title: "Create an LMS Website with LearnPress",
-    duration: "2 Weeks",
-    students: 156,
-    oldPrice: 29.0,
-    newPrice: "Free",
-    image: "/2.jpg",
-    category: "Development",
-  },
-  {
-    id: 3,
-    author: "Determined-Poitras",
-    title: "Create an LMS Website with LearnPress",
-    duration: "2 Weeks",
-    students: 156,
-    oldPrice: 29.0,
-    newPrice: "Free",
-    image: "/3.jpg",
-    category: "Development",
-  },
-  {
-    id: 4,
-    author: "Determined-Poitras",
-    title: "Create an LMS Website with LearnPress",
-    duration: "2 Weeks",
-    students: 156,
-    oldPrice: 29.0,
-    newPrice: "Free",
-    image: "/4.jpg",
-    category: "Development",
-  },
-  {
-    id: 5,
-    author: "Determined-Poitras",
-    title: "Create an LMS Website with LearnPress",
-    duration: "2 Weeks",
-    students: 156,
-    oldPrice: 29.0,
-    newPrice: "Free",
-    image: "/5.png",
-    category: "Development",
-  },
-  {
-    id: 6,
-    author: "Determined-Poitras",
-    title: "Create an LMS Website with LearnPress",
-    duration: "2 Weeks",
-    students: 156,
-    oldPrice: 29.0,
-    newPrice: "Free",
-    image: "/6.jpg",
-    category: "Development",
-  },
-];
+import courses from "../coursedata/data";
 
 export default function FeaturedCourses() {
   return (
@@ -93,55 +25,57 @@ export default function FeaturedCourses() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 px-8">
           {courses.map((course) => (
-            <Card
+            <div
               key={course.id}
-              className="w-[410px] h-[474px] transition-all duration-500 transform hover:-translate-y-4 hover:shadow-xl relative"
-              renderImage={() => (
-                <div className="relative h-[250px] w-full">
-                  <Image
-                    src={course.image}
-                    alt={course.title}
-                    fill
-                    className="object-cover rounded-t-lg"
-                  />
-                  <span className="h-[40px] max-w-[200px] absolute top-3 left-3 bg-black text-white text-[16px] font-semibold px-4 py-2 rounded-full">
-                    {course.category}
-                  </span>
-                </div>
-              )}
+              className="h-[474px] w-[410px] transition-all duration-500 transform hover:-translate-y-4 hover:shadow-xl rounded-lg overflow-hidden bg-white border border-gray-200"
             >
-              <p className="text-[16px] text-gray-500">By {course.author}</p>
-              <h5 className="text-xl font-semibold text-gray-800 mt-1">
-                {course.title}
-              </h5>
-
-              <div className="flex items-center text-sm text-gray-600 gap-6 mt-4">
-                <div className="flex items-center gap-1">
-                  <BiTimer className="text-orange-500 text-[16px]" />
-                  <span className="text-[16px]">{course.duration}</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <BiHardHat className="text-orange-500 text-[16px]" />
-                  <span className="text-[16px]">
-                    {course.students} students
-                  </span>
-                </div>
+              <div className="relative h-[250px] w-full">
+                <Image
+                  src={course.image}
+                  alt={course.title}
+                  fill
+                  className="object-cover"
+                />
+                <span className="absolute top-3 left-3 bg-black text-white text-[16px] font-semibold px-4 py-2 rounded-full max-w-[200px]">
+                  {course.category}
+                </span>
               </div>
 
-              <div className="border-t border-gray-200 pt-3 mt-4 flex justify-between items-center text-sm">
-                <div className="flex gap-2">
-                  <p className="line-through text-gray-400 text-[18px]">
-                    ${course.oldPrice}
-                  </p>
-                  <p className="text-[#55BE24] text-[18px]">
-                    {course.newPrice}
-                  </p>
+              {/* Content section */}
+              <div className="p-5">
+                <p className="text-[16px] text-gray-500">By {course.author}</p>
+                <h5 className="text-xl font-semibold text-gray-800 mt-1">
+                  {course.title}
+                </h5>
+
+                <div className="flex items-center text-sm text-gray-600 gap-6 mt-4">
+                  <div className="flex items-center gap-1">
+                    <BiTimer className="text-orange-500 text-[16px]" />
+                    <span className="text-[16px]">{course.duration}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <BiHardHat className="text-orange-500 text-[16px]" />
+                    <span className="text-[16px]">
+                      {course.students} students
+                    </span>
+                  </div>
                 </div>
-                <button className="text-blue-600 hover:underline text-[18px]">
-                  View More
-                </button>
+
+                <div className="border-t border-gray-200 pt-3 mt-4 flex justify-between items-center text-sm">
+                  <div className="flex gap-2">
+                    <p className="line-through text-gray-400 text-[18px]">
+                      ${course.oldPrice}
+                    </p>
+                    <p className="text-[#55BE24] text-[18px]">
+                      {course.newPrice}
+                    </p>
+                  </div>
+                  <button className="text-blue-600 hover:underline text-[18px]">
+                    View More
+                  </button>
+                </div>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>
