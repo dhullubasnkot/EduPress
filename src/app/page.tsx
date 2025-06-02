@@ -3,6 +3,7 @@ import ActiveExport from "./pages/activestudents";
 import CenterBanner from "./pages/centerbanner";
 import FeaturedCourses from "./pages/featuredcourses";
 import Hero from "./pages/hero";
+import { LatestArticles } from "./pages/latestArticle";
 import LearnLms from "./pages/LearnLMS";
 import StudentFeedBack from "./pages/studentfeedback";
 // import EducationBanner from "./pages/provideAmazing";
@@ -18,6 +19,7 @@ export default function Home() {
       <ActiveExport />
       <LearnLms />
       <StudentFeedBack />
+      <LatestArticles />
     </>
   );
 }
