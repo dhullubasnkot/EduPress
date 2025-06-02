@@ -4,6 +4,7 @@ import CenterBanner from "./pages/centerbanner";
 import FeaturedCourses from "./pages/featuredcourses";
 import Hero from "./pages/hero";
 import LearnLms from "./pages/LearnLMS";
+import StudentFeedBack from "./pages/studentfeedback";
 // import EducationBanner from "./pages/provideAmazing";
 import TopCategories from "./pages/topcategories";
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
       <CenterBanner />
       <ActiveExport />
       <LearnLms />
-      {/* <EducationBanner /> */}
+      <StudentFeedBack />
     </>
   );
 }
