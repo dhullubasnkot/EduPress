@@ -27,7 +27,7 @@ const cardData = [
 
 const customCardTheme = {
   root: {
-    base: "w-[410px] h-[440px] rounded-[16px] border border-gray-200 shadow-md transition hover:shadow-lg bg-white",
+    base: "w-[410px] h-[440px] rounded-[16px] border border-gray-200 shadow-md transition hover:shadow-lg bg-white transition-all duration-500 transform hover:-translate-y-4 hover:shadow-xl",
     children: "flex flex-col justify-between p-4 h-full",
   },
   img: {
